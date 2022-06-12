@@ -7,13 +7,12 @@ let drawPicture = document.querySelector('.draw')
 
 let radioEasyBtn = document.querySelector('.easyBtn');
 let radioNormalBtn = document.querySelector('.normalBtn');
+let radioHardBtn = document.querySelector('.hardBtn');
+
 let computerLevel = "easy";
 
 let yourScorePlace = document.querySelector('.options__result__picture__1');
 let compScorePlace = document.querySelector('.options__result__picture__2');
-
-console.log(yourScorePlace);
-
 
 let yourScore = 0;
 let compScore = 0;
@@ -23,6 +22,9 @@ radioEasyBtn.addEventListener('change', function(){
 
 radioNormalBtn.addEventListener('change', function(){
     computerLevel = "normal"})
+
+radioHardBtn.addEventListener('change', function(){
+    computerLevel = "hard"})
 
 let countTurn = 0;
 let checkWinIdent = false;
@@ -44,14 +46,12 @@ field.addEventListener("click", playerTurn);
 function playerTurn(e){
     let a = e.target.getAttribute('id');
     if (user[a]) return;   
-
     e.target.firstElementChild.classList.add('unhidden');
     e.target.firstElementChild.classList.remove('hidden');
     user[a] = 1;
     countTurn++;
     checkWin();
     computerTurn(computerLevel);
-
 }
 
 function computerTurn(computerLevel){
@@ -61,6 +61,9 @@ function computerTurn(computerLevel){
             break;
         case 'normal':
             computerTurnSmart()
+            break;
+        case 'hard':
+            computerTurnSmartest()
             break;
     }
 }
@@ -88,6 +91,33 @@ function computerTurnSmart(){
         
         if (smartCheck()) {b = smartCheck();}
         else {b = "cell" + getRandom();}
+        
+        if (user[b]!=1 && user[b]!='x'){
+            let c = document.getElementById(b);
+            c.lastElementChild.classList.add('unhidden');
+            c.lastElementChild.classList.remove('hidden');
+            user[b]='x';
+            freeCell = 1;
+            countTurn++;
+            checkWin();
+        }
+    }
+}
+
+function computerTurnSmartest(){
+    let freeCell = 0;
+    let b;
+    
+    while (!freeCell && countTurn < 8 && !checkWinIdent) {
+        if (smartestCheck()) {b = smartestCheck();}
+        else if (smartCheck()) {b = smartCheck();}
+        else if (!user['cell5']) {b = "cell5";}
+        else if (!user['cell1']) {b = "cell1";}
+        else if (!user['cell3']) {b = "cell3";}
+        else if (!user['cell7']) {b = "cell7";}
+        else if (!user['cell9']) {b = "cell9";}
+        else {b = "cell" + getRandom();}
+        console.log(user['cell5']);
         
         if (user[b]!=1 && user[b]!='x'){
             let c = document.getElementById(b);
@@ -138,6 +168,57 @@ function smartCheck(){
         if (!user.cell9) return ('cell9');
     };
     if (user.cell3+user.cell5+user.cell7 == 2){
+        if (!user.cell3) return ('cell3');
+        if (!user.cell5) return ('cell5');
+        if (!user.cell7) return ('cell7');
+    };    
+}
+
+function smartestCheck(){
+    let a1 = user.cell1+user.cell2+user.cell3; 
+    if (a1 == "0xx" || a1 == "x0x" || a1 == "xx0") {
+        if (!user.cell1) return ('cell1');
+        if (!user.cell2) return ('cell2');
+        if (!user.cell3) return ('cell3');
+    };
+    a1 = user.cell4+user.cell5+user.cell6;
+    if (a1 == "0xx" || a1 == "x0x" || a1 == "xx0") {
+        if (!user.cell4) return ('cell4');
+        if (!user.cell5) return ('cell5');
+        if (!user.cell6) return ('cell6');
+    };
+    a1 = user.cell7+user.cell8+user.cell9;
+    if (a1 == "0xx" || a1 == "x0x" || a1 == "xx0") {
+        if (!user.cell7) return ('cell7');
+        if (!user.cell8) return ('cell8');
+        if (!user.cell9) return ('cell9');
+    };
+    a1 = user.cell1+user.cell4+user.cell7;
+    if (a1 == "0xx" || a1 == "x0x" || a1 == "xx0") {
+        if (!user.cell1) return ('cell1');
+        if (!user.cell4) return ('cell4');
+        if (!user.cell7) return ('cell7');
+    };
+    a1 = user.cell2+user.cell5+user.cell8;
+    if (a1 == "0xx" || a1 == "x0x" || a1 == "xx0") {
+        if (!user.cell2) return ('cell2');
+        if (!user.cell5) return ('cell5');
+        if (!user.cell8) return ('cell8');
+    };
+    a1 = user.cell3+user.cell6+user.cell9;
+    if (a1 == "0xx" || a1 == "x0x" || a1 == "xx0") {
+        if (!user.cell3) return ('cell3');
+        if (!user.cell6) return ('cell6');
+        if (!user.cell9) return ('cell9');
+    };
+    a1 = user.cell1+user.cell5+user.cell9;
+    if (a1 == "0xx" || a1 == "x0x" || a1 == "xx0") {
+        if (!user.cell1) return ('cell1');
+        if (!user.cell5) return ('cell5');
+        if (!user.cell9) return ('cell9');
+    };
+    a1 = user.cell3+user.cell5+user.cell7;
+    if (a1 == "0xx" || a1 == "x0x" || a1 == "xx0") {
         if (!user.cell3) return ('cell3');
         if (!user.cell5) return ('cell5');
         if (!user.cell7) return ('cell7');

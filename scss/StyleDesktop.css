@@ -26,7 +26,7 @@
 .win_lose .unhidden {
   position: absolute;
   top: 0vw;
-  left: 2.7777777778vw;
+  left: -1.3888888889vw;
   transition-duration: 2s;
 }
 .win_lose img {
@@ -77,7 +77,7 @@
 .options {
   background-color: yellow;
   min-height: 100%;
-  color: rgba(0, 0, 255, 0.666);
+  color: rgb(0, 217, 255);
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -87,11 +87,13 @@
 }
 .options__settings {
   width: 100%;
-  padding-left: 0.6944444444vw;
+  padding-left: 2.7777777778vw;
+  text-align: center;
 }
 .options__result {
   width: 100%;
-  padding-right: 0.6944444444vw;
+  padding-right: 2.7777777778vw;
+  padding-left: 2.7777777778vw;
 }
 .options__result img {
   max-height: 6.9444444444vw;
@@ -99,13 +101,12 @@
 }
 .options__result__header {
   margin-top: 0vw;
-  margin-left: 0.6944444444vw;
   margin-bottom: 1.3888888889vw;
   font-size: 3.4722222222vw;
   font-weight: 600;
+  text-align: center;
 }
 .options__result__picture {
-  margin: 0 0.6944444444vw;
   background: rgb(0, 217, 255);
   display: flex;
   justify-content: space-between;
@@ -139,6 +140,7 @@
 .onlyRadio {
   display: flex;
   flex-direction: column;
+  margin-left: 9.7222222222vw;
 }
 
 .RadioButtonLabelStyled {
@@ -168,7 +170,7 @@
   left: 0.5555555556vw;
   width: 2.2222222222vw;
   height: 2.2222222222vw;
-  background-color: blue;
+  background-color: rgb(0, 217, 255);
   border-radius: 50%;
   transform: scale(0);
   transition: 0.5s;

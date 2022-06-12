@@ -97,7 +97,7 @@
 .options{
     background-color: yellow;
     min-height: 100%;
-    color: rgba(0, 0, 255, 0.666);
+    color: rgb(0, 217, 255);
     display: flex;
     justify-content: space-around;
     flex-direction: column;
@@ -106,13 +106,17 @@
     width: 100%;
 
     &__settings{
-        width: adapt(300);
-        padding-left: adapt(33);        
+        width: 80%;
+        padding-left: adapt(0);
+        text-align: center;
+      
     };
 
     &__result{
-        width: 60%;
-        padding-right: adapt(0);        
+        width: 80%;
+        padding-right: adapt(0); 
+        padding-left: adapt(0);        
+        text-align: center;
 
         img{
             max-height: adapt(70);
@@ -129,13 +133,13 @@
         &__picture{
             background: rgb(0, 217, 255); 
             display: flex;
-            justify-content: space-between;
+            justify-content: space-around;
             height: adapt(80);
             align-items: center;
             font-size: adapt(30);
             font-weight: 600;
             color: yellow;
-            width: 90%;
+            width: 100%;
             margin-bottom: adapt(10);
         }
     };
@@ -171,7 +175,10 @@
 .onlyRadio{
     display: flex;
     flex-direction: row;
-    gap: adapt(80);
+    gap: adapt(0);
+    justify-content: space-between;
+    margin-right: adapt(20);
+
 }
 
 .RadioButtonLabelStyled{
@@ -201,7 +208,8 @@ cursor: pointer;
     left: adapt(4);
     width: adapt(16);
     height: adapt(16);
-    background-color: blue;
+    background-color:rgb(0, 217, 255);
+    ;
     border-radius: 50%;
     transform: scale(0);
     transition: 0.5s;

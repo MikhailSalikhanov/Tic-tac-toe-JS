@@ -37,7 +37,7 @@
     .unhidden{
         position: absolute;
         top: adapt(0);
-        left: adapt(40);
+        left: adapt(-20);
         transition-duration: 2s;
     }
 
@@ -98,7 +98,7 @@
 .options{
     background-color: yellow;
     min-height: 100%;
-    color: rgba(0, 0, 255, 0.666);
+    color: rgb(0, 217, 255);
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -110,12 +110,15 @@
 
     &__settings{
         width: 100%;
-        padding-left: adapt(10);        
+        padding-left: adapt(40);  
+        text-align: center;      
     };
 
     &__result{
         width: 100%;
-        padding-right: adapt(10);        
+        padding-right: adapt(40);
+        padding-left: adapt(40);        
+        
 
         img{
             max-height: adapt(100);
@@ -124,14 +127,13 @@
 
         &__header{
             margin-top: adapt(0);
-            margin-left: adapt(10);
             margin-bottom: adapt(20);
             font-size: adapt(50);
             font-weight: 600;
+            text-align: center;
         }
 
         &__picture{
-            margin: 0 adapt(10);
             background: rgb(0, 217, 255); 
             display: flex;
             justify-content: space-between;
@@ -174,7 +176,8 @@
 .onlyRadio{
     display: flex;
     flex-direction: column;
-    // gap: adapt(80);
+    margin-left: adapt(140);
+    // align-items: center;
 }
 
 
@@ -205,7 +208,8 @@ cursor: pointer;
     left: adapt(8);
     width: adapt(32);
     height: adapt(32);
-    background-color: blue;
+    background-color: rgb(0, 217, 255);
+    ;
     border-radius: 50%;
     transform: scale(0);
     transition: 0.5s;
