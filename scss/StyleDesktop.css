@@ -1,15 +1,19 @@
+.body {
+  background: rgb(0, 217, 255);
+}
+
 .wrapper {
   position: relative;
   background: rgb(0, 217, 255);
-  height: 100vh;
-  width: 100vw;
+  height: 100%;
+  width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
 
 .container {
-  width: 100vw;
+  width: 100%;
 }
 
 .win_lose .hidden {
@@ -76,7 +80,8 @@
   flex-direction: column;
   justify-content: flex-start;
   gap: 10.4166666667vw;
-  width: 40%;
+  width: 35%;
+  flex-shrink: 0;
 }
 .options__settings {
   width: 100%;
