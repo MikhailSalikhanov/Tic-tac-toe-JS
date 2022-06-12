@@ -11,6 +11,7 @@
 .container {
   width: 100vw;
   background: rgb(0, 217, 255);
+  height: 100%;
 }
 
 .win_lose .hidden {
@@ -80,8 +81,8 @@
   width: 100%;
 }
 .options__settings {
-  width: 60%;
-  padding-left: 0vw;
+  width: 75vw;
+  padding-left: 8.25vw;
 }
 .options__result {
   width: 60%;
@@ -107,6 +108,7 @@
   font-weight: 600;
   color: yellow;
   width: 90%;
+  margin-bottom: 2.5vw;
 }
 
 .RadioButtonWrapperStyled {
