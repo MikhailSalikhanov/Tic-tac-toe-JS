@@ -6,18 +6,23 @@
     @return $result2;
 };
 
+.body{
+    background: rgb(0, 217, 255);
+}
+
 .wrapper{
     position: relative;
-    background: rgb(0, 217, 255);
-    height: 100%;
-    width: 100vw;
+    // background: rgb(0, 217, 255);
+    min-height: 100%;
+    width: 100%;
+    min-height: adapt(400);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
 .container {
-    width: 100vw;
+    width: 100%;
     background: rgb(0, 217, 255);
     height: 100%;
 }
@@ -92,7 +97,7 @@
 
 .options{
     background-color: yellow;
-    height: adapt(300);
+    min-height: 100%;
     color: rgba(0, 0, 255, 0.666);
     display: flex;
     justify-content: space-around;
