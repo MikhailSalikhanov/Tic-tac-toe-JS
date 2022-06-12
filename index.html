@@ -1,0 +1,75 @@
+ <!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="./scss/style.css">
+		<title>tic-tac-toe</title>
+	</head>
+	
+	<body>
+		<div class="wrapper">
+			<div class="container">
+				<div class="win_lose">
+					<img src="./img/win1.png" alt="Win" class="picture win hidden">
+					<img src="./img/lose1.png" alt="Lose" class="picture lose hidden">
+					<img src="./img/draw1.png" alt="Draw" class="picture draw hidden">
+
+				</div>
+				<div class="field">
+					<div class="field__row">
+						<div class="field__row__cell cell1" id="cell1"><img src="./img/tryzub.png" alt="tryzub" class="picture hidden"> <img src="./img/orel.png" alt="orel" class="picture hidden"></div>
+						<div class="field__row__cell cell2" id="cell2"><img src="./img/tryzub.png" alt="tryzub" class="picture hidden"> <img src="./img/orel.png" alt="orel" class="picture hidden"></div>
+						<div class="field__row__cell cell3" id="cell3"><img src="./img/tryzub.png" alt="tryzub" class="picture hidden"> <img src="./img/orel.png" alt="orel" class="picture hidden"></div>
+					</div>
+					<div class="field__row">
+						<div class="field__row__cell cell4" id="cell4"><img src="./img/tryzub.png" alt="tryzub" class="picture hidden"> <img src="./img/orel.png" alt="orel" class="picture hidden"></div>
+						<div class="field__row__cell cell5" id="cell5"><img src="./img/tryzub.png" alt="tryzub" class="picture hidden"> <img src="./img/orel.png" alt="orel" class="picture hidden"></div>
+						<div class="field__row__cell cell6" id="cell6"><img src="./img/tryzub.png" alt="tryzub" class="picture hidden"> <img src="./img/orel.png" alt="orel" class="picture hidden"></div>
+					</div>
+					<div class="field__row">
+						<div class="field__row__cell cell7" id="cell7"><img src="./img/tryzub.png" alt="tryzub" class="picture hidden"> <img src="./img/orel.png" alt="orel" class="picture hidden"></div>
+						<div class="field__row__cell cell8" id="cell8"><img src="./img/tryzub.png" alt="tryzub" class="picture hidden"> <img src="./img/orel.png" alt="orel" class="picture hidden"></div>
+						<div class="field__row__cell cell9" id="cell9"><img src="./img/tryzub.png" alt="tryzub" class="picture hidden"> <img src="./img/orel.png" alt="orel" class="picture hidden"></div>
+					</div>
+				</div>
+			</div>
+			<div class="options">
+				<div class="options__settings">
+					<div class="border RadioButtonWrapperStyled">
+						<div class="RadioButtonHeadStyled">Computer level:</div>
+						<div class="onlyRadio">
+							<input type="radio" name="radio" id="1" value="1" class="RadioButtonStyled easyBtn" checked>
+							<label for="1" class="RadioButtonLabelStyled">Easy</label>
+							<input class="RadioButtonStyled normalBtn" type="radio" name="radio" id="2" value="2">
+							<label for="2" class="RadioButtonLabelStyled">Normal</label>
+							<!-- <input class="RadioButtonStyled" type="radio" name="radio" id="3" value="3">
+								<label for="3" class="RadioButtonLabelStyled">Вариант 3</label> -->
+						</div>
+					</div>
+
+				</div>
+				<div class="options__result">
+					<div class="options__result__header">
+						Current result:
+					</div>
+					<div class="options__result__picture">
+						<img src="./img/tryzub.png" alt="Tryzub">
+						<p class="options__result__picture__1">0</p>
+						<p class="options__result__picture__0">:</p>
+
+						<p class="options__result__picture__2">0</p>
+						<img src="./img/orel.png" alt="Orel">
+					</div>
+
+				</div>
+			</div>
+
+		</div>
+		<script src="./js/script.js"></script>
+	</body>
+</html>
+
+
+
+

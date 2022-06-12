@@ -1,0 +1,168 @@
+.wrapper {
+  position: relative;
+  background: rgb(0, 217, 255);
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.container {
+  width: 100vw;
+}
+
+.win_lose .hidden {
+  position: absolute;
+  top: -138.8888888889vw;
+  left: 0;
+}
+.win_lose .unhidden {
+  position: absolute;
+  top: 0vw;
+  left: 2.7777777778vw;
+  transition-duration: 2s;
+}
+.win_lose img {
+  width: 69.4444444444vw;
+}
+
+.field {
+  padding-top: 2.0833333333vw;
+  padding-bottom: 2.0833333333vw;
+  background: rgb(0, 217, 255);
+  width: 45.8333333333vw;
+  height: 45.8333333333vw;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+.field img {
+  max-height: 12.5vw;
+  max-width: 12.5vw;
+  display: block;
+  margin: auto auto;
+}
+.field .hidden {
+  display: none;
+}
+.field .unhidden {
+  display: block;
+}
+.field__row {
+  width: 100%;
+  height: 15.2777777778vw;
+  display: flex;
+}
+.field__row__cell {
+  width: 15.2777777778vw;
+}
+
+.cell4, .cell5, .cell6 {
+  border-top: 0.6944444444vw yellow solid;
+  border-bottom: 0.6944444444vw yellow solid;
+}
+
+.cell2, .cell5, .cell8 {
+  border-right: 0.6944444444vw yellow solid;
+  border-left: 0.6944444444vw yellow solid;
+}
+
+.options {
+  background-color: yellow;
+  height: 100vh;
+  color: rgba(0, 0, 255, 0.666);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 10.4166666667vw;
+  width: 40%;
+}
+.options__settings {
+  width: 100%;
+  padding-left: 0.6944444444vw;
+}
+.options__result {
+  width: 100%;
+  padding-right: 0.6944444444vw;
+}
+.options__result img {
+  max-height: 6.9444444444vw;
+  max-width: 6.9444444444vw;
+}
+.options__result__header {
+  margin-top: 0vw;
+  margin-left: 0.6944444444vw;
+  margin-bottom: 1.3888888889vw;
+  font-size: 3.4722222222vw;
+  font-weight: 600;
+}
+.options__result__picture {
+  margin: 0 0.6944444444vw;
+  background: rgb(0, 217, 255);
+  display: flex;
+  justify-content: space-between;
+  height: 8.3333333333vw;
+  align-items: center;
+  font-size: 4.1666666667vw;
+  font-weight: 600;
+  color: yellow;
+}
+
+.RadioButtonWrapperStyled {
+  display: flex;
+  flex-direction: column;
+}
+
+.RadioButtonStyled {
+  display: none;
+}
+
+.RadioButtonStyled:checked + .RadioButtonLabelStyled::after {
+  transform: scale(1);
+}
+
+.RadioButtonHeadStyled {
+  margin-top: 1.3888888889vw;
+  margin-bottom: 1.3888888889vw;
+  font-size: 3.4722222222vw;
+  font-weight: 600;
+}
+
+.onlyRadio {
+  display: flex;
+  flex-direction: column;
+}
+
+.RadioButtonLabelStyled {
+  font-size: 2.2222222222vw;
+  display: inline-flex;
+  line-height: 140%;
+  align-items: center;
+  margin-bottom: 1.3888888889vw;
+  position: relative;
+  cursor: pointer;
+}
+
+.RadioButtonLabelStyled::before {
+  content: "";
+  align-self: flex-start;
+  margin-right: 1.3888888889vw;
+  flex: 0 0 3.3333333333vw;
+  height: 3.3333333333vw;
+  background-color: white;
+  border-radius: 50%;
+}
+
+.RadioButtonLabelStyled::after {
+  content: "";
+  position: absolute;
+  top: 0.5555555556vw;
+  left: 0.5555555556vw;
+  width: 2.2222222222vw;
+  height: 2.2222222222vw;
+  background-color: blue;
+  border-radius: 50%;
+  transform: scale(0);
+  transition: 0.5s;
+}/*# sourceMappingURL=StyleDesktop.css.map */

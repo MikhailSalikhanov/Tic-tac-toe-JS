@@ -1,0 +1,11 @@
+// @use "sass:math";
+
+// @function adapt($px) {
+//     $result1: math.div($px, 1440) * 100;
+//     $result2: $result1 + vw;
+//     @return $result2;
+// }
+
+@import url(../scss/Reset.css);
+@import url(../scss/StyleDesktop.css);
+@import url(../scss/StyleTablet.css) (max-width: 768px);

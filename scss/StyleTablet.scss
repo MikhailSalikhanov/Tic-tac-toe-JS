@@ -1,0 +1,203 @@
+@use "sass:math";
+
+@function adapt($px) {
+    $result1: math.div($px, 400) * 100;
+    $result2: $result1 + vw;
+    @return $result2;
+};
+
+.wrapper{
+    position: relative;
+    background: rgb(0, 217, 255);
+    height: 100%;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.container {
+    width: 100vw;
+    background: rgb(0, 217, 255);
+
+}
+
+.win_lose{
+
+    .hidden{
+        position: absolute;
+        top: adapt(-1000);
+        left: 0;
+    }
+
+    .unhidden{
+        position: absolute;
+        top: adapt(30);
+        left: adapt(0);
+        transition-duration: 2s;
+    }
+
+    img{
+        width: adapt(400);
+    }
+}
+
+.field {
+    padding-top: adapt(10);
+    background: rgb(0, 217, 255);
+    width: adapt(300);
+    height: adapt(300);
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+
+
+        img{
+            max-height: adapt(80);
+            max-width: adapt(80);
+            display: block;
+            margin: auto auto;
+        }
+
+        .hidden{
+            display: none;
+        }
+
+        .unhidden{
+            display: block;
+        }
+
+		&__row {
+            width: 100%;
+            height: adapt(100);
+            display: flex;
+            
+
+            &__cell{
+                width: adapt(100);
+            }
+		}
+}
+
+.cell4, .cell5, .cell6{
+    border-top: adapt(5) yellow solid;
+    border-bottom: adapt(5) yellow solid;
+}
+
+.cell2, .cell5, .cell8{
+    border-right: adapt(5) yellow solid;
+    border-left: adapt(5) yellow solid;
+}
+
+
+.options{
+    background-color: yellow;
+    height: adapt(300);
+    color: rgba(0, 0, 255, 0.666);
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    gap: adapt(5);
+    width: 100%;
+
+    &__settings{
+        width: 60%;
+        padding-left: adapt(0);        
+    };
+
+    &__result{
+        width: 60%;
+        padding-right: adapt(0);        
+
+        img{
+            max-height: adapt(70);
+            max-width: adapt(70);
+        }
+
+        &__header{
+            margin-top: adapt(0);
+            margin-bottom: adapt(10);
+            font-size: adapt(30);
+            font-weight: 600;
+        }
+
+        &__picture{
+            background: rgb(0, 217, 255); 
+            display: flex;
+            justify-content: space-between;
+            height: adapt(80);
+            align-items: center;
+            font-size: adapt(30);
+            font-weight: 600;
+            color: yellow;
+            width: 90%;
+        }
+    };
+
+}
+
+
+
+
+// RadioButtons //
+
+.RadioButtonWrapperStyled{
+    display: flex;
+    flex-direction: column;
+}
+
+.RadioButtonStyled{
+    display: none;
+}
+
+
+.RadioButtonStyled:checked + .RadioButtonLabelStyled::after{
+    transform: scale(1);
+}
+
+.RadioButtonHeadStyled{
+    margin-top: adapt(10);
+    margin-bottom: adapt(10);
+    font-size: adapt(30);
+    font-weight: 600;
+}
+
+.onlyRadio{
+    display: flex;
+    flex-direction: row;
+    gap: adapt(80);
+}
+
+.RadioButtonLabelStyled{
+font-size: adapt(16);
+display: inline-flex;
+line-height: 140%;
+align-items: center;
+margin-bottom: adapt(10);
+position: relative;
+cursor: pointer;
+}
+
+.RadioButtonLabelStyled::before{
+    content: "";
+    align-self: flex-start;
+    margin-right: adapt(10);
+    flex: 0 0 adapt(24);
+    height: adapt(24);
+    background-color: white;
+    border-radius: 50%;
+}
+
+.RadioButtonLabelStyled::after{
+    content: "";
+    position: absolute;
+    top: adapt(4);
+    left: adapt(4);
+    width: adapt(16);
+    height: adapt(16);
+    background-color: blue;
+    border-radius: 50%;
+    transform: scale(0);
+    transition: 0.5s;
+}
