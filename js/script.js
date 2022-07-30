@@ -51,10 +51,12 @@ function playerTurn(e){
     user[a] = 1;
     countTurn++;
     checkWin();
-    computerTurn(computerLevel);
+    field.removeEventListener("click", playerTurn);
+    setTimeout(computerTurn, 400, computerLevel);
 }
 
 function computerTurn(computerLevel){
+    field.addEventListener("click", playerTurn);
     switch (computerLevel) {
         case 'easy':
             computerTurnRandom();
